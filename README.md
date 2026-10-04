@@ -7,6 +7,6 @@ GitHub Pagesでアプリの紹介、使い方、動作環境、プライバシ�
 - English privacy policy: `en.html`
 - 配布DMG: `downloads/EdgeTapCopipe.dmg`
 
-公開URL: https://p-kiba.github.io/EdgeTapCopipe-Privacy-Policy-/
+公開URL: https://p-kiba.github.io/EdgeTapCopipe-App/
 
 GitHub Pagesは **Settings → Pages → Deploy from a branch → main → /(root)** に設定します。
