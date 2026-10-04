@@ -1,7 +1,12 @@
-# EdgeTapCopipe Privacy Policy
+# EdgeTapCopipe 配布サイト
 
-This repository contains the Japanese and English privacy policy for the macOS app EdgeTapCopipe.
+GitHub Pagesでアプリの紹介、使い方、動作環境、プライバシー情報、DMGダウンロードを公開します。
 
-Planned GitHub Pages URL: https://p-kiba.github.io/EdgeTapCopipe-Privacy-Policy-/
+- トップページ: `index.html`
+- 日本語プライバシーポリシー: `privacy.html`
+- English privacy policy: `en.html`
+- 配布DMG: `downloads/EdgeTapCopipe.dmg`
 
-The page is static and contains no tracking scripts or third-party assets. To publish with GitHub Pages, use **Settings → Pages → Deploy from a branch → main → /(root)**.
+公開URL: https://p-kiba.github.io/EdgeTapCopipe-Privacy-Policy-/
+
+GitHub Pagesは **Settings → Pages → Deploy from a branch → main → /(root)** に設定します。

@@ -3,52 +3,166 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="EdgeTapCopipe が扱う文章、タップ検出情報、Firebase に関するプライバシーポリシー。">
-  <title>プライバシーポリシー | EdgeTapCopipe</title>
-  <link rel="icon" href="./assets/app-icon.png">
-  <link rel="stylesheet" href="./style.css">
+  <meta name="theme-color" content="#102b46">
+  <meta name="description" content="選んだ文章をMac本体のタップで保存し、対応する入力欄へ入力するmacOSアプリ EdgeTapCopipe。">
+  <title>EdgeTapCopipe — 選んで、タップ。</title>
+  <link rel="icon" href="assets/brand-icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="hero">
-    <div class="shell">
-      <div class="topbar">
-        <div class="brand"><img src="./assets/app-icon.png" alt="" width="44" height="44"><span>EdgeTapCopipe</span></div>
-        <nav class="language" aria-label="言語"><a href="./" lang="ja" aria-current="page">日本語</a><a href="./en.html" lang="en">English</a></nav>
-      </div>
-      <div class="hero-copy">
-        <p class="eyebrow">PRIVACY POLICY</p>
-        <h1>プライバシーポリシー</h1>
-        <p class="lead">エッジをダブルタップして文章を保存・入力する macOS アプリです。文章と操作情報の扱いを説明します。</p>
-        <p class="hero-date">最終更新日：2026年9月23日</p>
-      </div>
-    </div>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="EdgeTapCopipe ホーム">
+      <img src="assets/brand-icon.png" alt="" width="42" height="42">
+      <span>EdgeTapCopipe</span>
+    </a>
+    <nav aria-label="メインナビゲーション">
+      <a href="#how-to" data-i18n="nav.how">使い方</a>
+      <a href="#requirements" data-i18n="nav.requirements">動作環境</a>
+      <a href="privacy.html" data-i18n="nav.privacy">プライバシー</a>
+      <a class="nav-download" href="downloads/EdgeTapCopipe.dmg" download><span data-i18n="common.download">ダウンロード</span> <span aria-hidden="true">↗</span></a>
+      <label class="language-control">
+        <span class="visually-hidden" data-i18n="languageLabel">表示言語</span>
+        <select class="language-select" data-language-select aria-label="表示言語">
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="ko">한국어</option>
+          <option value="zh-Hans">简体中文</option>
+          <option value="zh-Hant">繁體中文</option>
+        </select>
+      </label>
+    </nav>
   </header>
-  <main class="shell">
-    <article class="policy">
-      <h2>基本方針</h2>
 
-      <p>本ポリシーは、p-kiba が提供する macOS アプリ「EdgeTapCopipe」に適用されます。保存した文章と履歴を開発者のサーバーへ送信する処理は実装していません。ただし、Firebase Analytics を含む Firebase SDK が組み込まれています。</p>
-      <div class="facts" aria-label="プライバシー方針の要点">
-        <div class="fact"><strong>通常クリップボード不使用</strong><span>通常のシステムクリップボードを読み書きしません</span></div>
-        <div class="fact"><strong>文章はこのMacに保存</strong><span>保存内容と履歴はアプリの設定領域に保持します</span></div>
-        <div class="fact"><strong>アカウント不要</strong><span>登録やログインは必要ありません</span></div>
+  <main>
+    <section class="hero" data-carousel aria-label="EdgeTapCopipeの紹介" aria-roledescription="カルーセル">
+      <div class="hero-carousel">
+        <div class="hero-track" data-hero-track>
+          <article class="hero-slide" data-slide aria-label="1 / 4" aria-roledescription="スライド">
+            <div class="hero-copy">
+              <p class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="hero.eyebrow">macOS アプリケーション</span></p>
+              <h1 id="hero-title"><span data-hero-title>エッジを</span><br><span data-hero-title-emphasis>ダブルタップ。</span></h1>
+              <p class="hero-lede" data-hero-description>文章を選んで、2回タップ。保存から入力まで、直感的に。</p>
+              <p class="hero-feature-label"><span class="feature-label-dot" aria-hidden="true"></span><span data-hero-label>かんたんな使い方</span></p>
+            </div>
+            <div class="hero-visual"><div class="visual-glow" aria-hidden="true"></div><img src="assets/store-slides/01-double-tap.jpg" alt="エッジをダブルタップする使い方画面" width="1807" height="1280"></div>
+          </article>
+          <article class="hero-slide" data-slide aria-label="2 / 4" aria-roledescription="スライド" aria-hidden="true">
+            <div class="hero-copy">
+              <p class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="hero.eyebrow">macOS アプリケーション</span></p>
+              <h2><span data-hero-title>文章を保存。</span><br><span data-hero-title-emphasis>次の入力先へ。</span></h2>
+              <p class="hero-lede" data-hero-description>選んだ文章を専用枠に保存。履歴からペースト内容を選べます。</p>
+              <p class="hero-feature-label"><span class="feature-label-dot" aria-hidden="true"></span><span data-hero-label>保存内容と履歴</span></p>
+            </div>
+            <div class="hero-visual"><div class="visual-glow" aria-hidden="true"></div><img src="assets/store-slides/02-saved-text.jpg" alt="保存した文章と履歴の画面" width="1807" height="1280" loading="lazy"></div>
+          </article>
+          <article class="hero-slide" data-slide aria-label="3 / 4" aria-roledescription="スライド" aria-hidden="true">
+            <div class="hero-copy">
+              <p class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="hero.eyebrow">macOS アプリケーション</span></p>
+              <h2><span data-hero-title>反応を、</span><br><span data-hero-title-emphasis>自分好みに。</span></h2>
+              <p class="hero-lede" data-hero-description>感度を調整して、使う場所に合わせて振動を測定。</p>
+              <p class="hero-feature-label"><span class="feature-label-dot" aria-hidden="true"></span><span data-hero-label>反応の調整</span></p>
+            </div>
+            <div class="hero-visual"><div class="visual-glow" aria-hidden="true"></div><img src="assets/store-slides/03-sensitivity.jpg" alt="感度調整と周囲の振動測定の画面" width="1807" height="1280" loading="lazy"></div>
+          </article>
+          <article class="hero-slide" data-slide aria-label="4 / 4" aria-roledescription="スライド" aria-hidden="true">
+            <div class="hero-copy">
+              <p class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="hero.eyebrow">macOS アプリケーション</span></p>
+              <h2 class="is-compact"><span data-hero-title>クリップボードに</span><br><span data-hero-title-emphasis>触れずに使う。</span></h2>
+              <p class="hero-lede" data-hero-description>保存した文章と履歴はこのMacの中だけに。</p>
+              <p class="hero-feature-label"><span class="feature-label-dot" aria-hidden="true"></span><span data-hero-label>プライバシーと設定</span></p>
+            </div>
+            <div class="hero-visual"><div class="visual-glow" aria-hidden="true"></div><img src="assets/store-slides/04-settings.jpg" alt="文章の操作とアクセシビリティ設定の画面" width="1807" height="1280" loading="lazy"></div>
+          </article>
+        </div>
       </div>
-      <h2>アプリが扱う情報と目的</h2>
-      <ul>
-        <li>ユーザーが操作したとき、他のアプリで選択されている文章を取得し、専用の保存枠へ保存します。入力操作時には、保存された文章を対象アプリへ渡します。通常のシステムクリップボードは読み書きしません。macOS のサービス機能に対応するアプリでは、OS がその操作のために用意する一時的な受け渡し領域を利用します。</li>
-        <li>保存した文章と履歴（最大15件）は、このMacのアプリ設定領域（UserDefaults）に保持され、アプリの再起動後も残ります。文章を開発者のサーバーへ送信する処理は実装していません。</li>
-        <li>タップ検出のため、Mac の加速度センサーの値を一時的に処理します。キー操作後の誤検知を避けるため、キー操作が起きたことも検知しますが、入力された文字そのものは取得・保存しません。通常の配布版は、学習用の成功例・誤検知波形を保存しません。</li>
-        <li>感度や動作に関する設定は、このMacのアプリ設定領域に保存します。アクセシビリティ権限は、選択文章の取得と対象アプリへの入力に使用します。</li>
-      </ul>
-      <h2>Firebase と外部サービス</h2>
-      <p>アプリには Google の Firebase SDK（Firebase Analytics を含む）が組み込まれ、起動時に初期化されます。開発者が独自の分析イベントを送信する処理はありませんが、SDK の設定によっては、アプリの起動・利用状況や端末・アプリに関する情報が Google に送信される可能性があります。選択文章、保存履歴、キー入力内容、加速度の波形を Firebase へ送信する処理は実装していません。Firebase のデータの扱いは<a href="https://firebase.google.com/support/privacy">Google のプライバシー情報</a>もご確認ください。</p>
-      <h2>保存期間と削除</h2>
-      <p>保存内容と履歴は、ユーザーがアプリ内でそれぞれ消去するまで、このMacに保持されます。履歴は上限を超えると古いものから削除されます。「保存内容を消去」は履歴を消さず、「履歴を消去」は現在の保存内容を消しません。設定はアプリの設定領域に残ります。外部サービスに保存された可能性のあるデータについての問い合わせは、下記の窓口をご利用ください。</p>
-      <h2>問い合わせと変更</h2>
-      <p>プライバシーに関するご質問・削除依頼は、<a href="https://github.com/p-kiba/EdgeTapCopipe-Privacy-Policy-/issues/new">GitHub Issues</a>からご連絡ください。Issue は公開されるため、保存した文章や個人情報は投稿しないでください。個別の連絡方法が必要な場合は、その旨だけお知らせください。</p>
-      <p>アプリの機能やデータの扱いが変わる場合、このページと更新日を改めます。</p>
-    </article>
+      <div class="hero-persistent" aria-label="固定操作">
+        <div class="hero-actions">
+          <div class="hero-release-group">
+            <a class="button button-light" href="downloads/EdgeTapCopipe.dmg" download><span data-i18n="hero.download">ダウンロード</span> <span aria-hidden="true">↗</span></a>
+            <span class="hero-meta" aria-label="必要なmacOSバージョン" data-i18n-aria="hero.metaLabel"><strong>26+</strong> <span data-i18n="hero.meta.os">macOS</span></span>
+          </div>
+          <a class="text-link" href="#how-to"><span data-i18n="hero.learn">使い方を見る</span> <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="carousel-dots" role="group" aria-label="紹介画像を選択">
+          <button class="carousel-dot is-active" type="button" data-slide-to="0" aria-label="1枚目：エッジをダブルタップ" aria-current="true"><span></span></button>
+          <button class="carousel-dot" type="button" data-slide-to="1" aria-label="2枚目：文章を保存" aria-current="false"><span></span></button>
+          <button class="carousel-dot" type="button" data-slide-to="2" aria-label="3枚目：反応を自分好みに調整" aria-current="false"><span></span></button>
+          <button class="carousel-dot" type="button" data-slide-to="3" aria-label="4枚目：クリップボードに触れずに使う" aria-current="false"><span></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section section-wrap" id="how-to" aria-labelledby="how-title">
+      <div class="section-heading">
+        <p class="eyebrow eyebrow-dark" data-i18n="how.eyebrow">HOW IT WORKS</p>
+        <h2 id="how-title" data-i18n="how.title">操作は、シンプル。</h2>
+        <p data-i18n="how.description">文章を選んで保存し、必要な場所で呼び出します。</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-number">01</span>
+          <div><h3 data-i18n="how.step1.title">文章を選ぶ</h3><p data-i18n="how.step1.description">対応するアプリで、保存したい文章を選択します。</p></div>
+        </li>
+        <li>
+          <span class="step-number">02</span>
+          <div><h3 data-i18n="how.step2.title">Mac本体をタップ</h3><p data-i18n="how.step2.description">基本はダブルタップ。選択中の文章が専用枠に保存されます。</p></div>
+        </li>
+        <li>
+          <span class="step-number">03</span>
+          <div><h3 data-i18n="how.step3.title">入力先でもう一度</h3><p data-i18n="how.step3.description">入力位置を選び、本体をタップ。保存した文章を対応欄へ入力します。</p></div>
+        </li>
+      </ol>
+      <p class="steps-footnote" data-i18n="how.footnote">メニューバーから保存内容や履歴を確認でき、文章の消去や一時停止も行えます。</p>
+    </section>
+
+    <section class="privacy-band" aria-labelledby="privacy-heading">
+      <div class="privacy-band-inner">
+        <div class="privacy-mark" aria-hidden="true">⌁</div>
+        <div>
+          <p class="eyebrow" data-i18n="privacy.eyebrow">YOUR TEXT, YOUR MAC</p>
+          <h2 id="privacy-heading" data-i18n="privacy.title">文章は、このMacの中に。</h2>
+          <p data-i18n="privacy.summary">選択して保存した文章と履歴は、このMacのユーザー領域に保存されます。Firebase Analyticsでアプリの利用状況を計測しますが、文章やセンサー測定値をAnalyticsへ送る処理はありません。アクセシビリティ許可は、選択した文章の取得と保存文章の入力に使います。</p>
+          <a class="privacy-link" href="privacy.html"><span data-i18n="privacy.read">プライバシーポリシーを読む</span> <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="requirements section-wrap" id="requirements" aria-labelledby="requirements-title">
+      <div class="section-heading">
+        <p class="eyebrow eyebrow-dark" data-i18n="requirements.eyebrow">REQUIREMENTS</p>
+        <h2 id="requirements-title" data-i18n="requirements.title">動作環境と対応範囲</h2>
+      </div>
+      <div class="requirements-content">
+        <dl class="spec-list">
+          <div><dt data-i18n="requirements.os">OS</dt><dd data-i18n="requirements.osValue">macOS 26.0以降</dd></div>
+          <div><dt data-i18n="requirements.hardware">ハードウェア</dt><dd data-i18n="requirements.hardwareValue">内蔵加速度センサーを搭載したMacBook</dd></div>
+          <div><dt data-i18n="requirements.tested">確認済み環境</dt><dd data-i18n="requirements.testedValue">MacBook Pro（M4 Pro）、macOS 26.5.2</dd></div>
+          <div><dt data-i18n="requirements.accessibility">入力連携</dt><dd data-i18n="requirements.accessibilityValue">アクセシビリティ許可が必要</dd></div>
+        </dl>
+        <div class="compat-note">
+          <span class="note-icon" aria-hidden="true">i</span>
+          <p data-i18n="requirements.note">入力連携は、文字情報を公開する対応欄で動作します。すべてのアプリや入力欄での動作を保証するものではありません。パスワード欄などの保護された入力欄では操作しません。ほかのMac機種でのセンサー動作は確認中です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section" id="download" aria-labelledby="download-title">
+      <div class="download-content">
+        <p class="eyebrow" data-i18n="download.eyebrow">READY WHEN YOU ARE</p>
+        <h2 id="download-title" data-i18n="download.title">タップで、文章をつなぐ。</h2>
+        <p data-i18n="download.description">アプリ本体をDMG形式で直接ダウンロードできます。リリースノートはGitHub Releasesで確認できます。</p>
+        <a class="button button-blue" href="downloads/EdgeTapCopipe.dmg" download><span data-i18n="download.button">ダウンロード</span> <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
   </main>
-  <footer><div class="shell">© 2026 p-kiba · EdgeTapCopipe</div></footer>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="./">EdgeTapCopipe</a>
+    <span data-i18n="footer.tagline">Mac本体のタップで、選択した文章を保存・入力。</span>
+    <div><a href="privacy.html" data-i18n="nav.privacy">プライバシー</a><a href="https://github.com/p-kiba/EdgeTapCopipe" target="_blank" rel="noreferrer">GitHub</a></div>
+  </footer>
+  <script src="language.js" defer></script>
+  <script src="carousel.js" defer></script>
 </body>
 </html>
